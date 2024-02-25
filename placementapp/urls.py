@@ -25,7 +25,9 @@ urlpatterns = [
   path('index/',views.index,name='index'),
   path('login/',views.login,name='login'),
   path('update/',views.update,name='update'),
-  path('languages/',views.languages,name='languages'),
+  path('languages/', views.languages, name='languages'),
+  path('chat/',views.chat,name='chat'),
+  
  
   
 ]

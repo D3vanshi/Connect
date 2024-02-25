@@ -22,22 +22,8 @@ def welcome(request):
 def languages(request):
     return render(request, 'languages.html')
 
-
-
-def welcome2(request):
-    user_type = request.GET.get('type', '')
-    
-    if user_type == 'faculty':
-        # Handle faculty login logic here
-        return HttpResponse("Faculty Login Page")
-
-    elif user_type == 'student':
-        # Handle student login logic here
-        return HttpResponse("Student Login Page")
-
-    else:
-        # Handle other cases or provide a default view
-        return HttpResponse("Invalid user type")
+def chat (request):
+    return render(request, 'chat.html')
 
 
 
@@ -128,17 +114,7 @@ def proupdate(request):
     else:
         return render(request,'update.html')
 
-      
-def events(request):
-    if request.method=='POST':
-        name=request.POST.get('course_name')
-        description=request.POST.get('description')
-        image=request.Files['image']
-        add_courses(course_name=name,description=description,image=image).save()
-        return render(request,'index.html')
-    
-    else:
-        return render(request,'events.html')
+ 
 
 
 
