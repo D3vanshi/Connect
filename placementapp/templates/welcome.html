@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome</title>
+
+    <style>
+      body {
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-image: url('https://media.istockphoto.com/id/1402399049/vector/dark-blue-abstract-background-with-triangle-lines-stripe-and-light-composition.jpg?s=612x612&w=0&k=20&c=hwCVDMjge-rFOL92igkhFUMR50R9XmL2Rc46Dhk1110='); /* Replace 'background.jpg' with your actual image file name */
+    background-size: cover;
+    background-position: center;
+
+        }
+
+        .welcome-container {
+            text-align: center;
+            max-width: 400px; /* Set a maximum width for the container */
+            margin: 20px; /* Added margin for better spacing */
+        }
+
+        h2 {
+            margin-bottom: 30px; /* Increased margin for more space */
+            font-size: 38px; /* Increased font size */
+            color: #ffffff;
+        }
+
+        p {
+            margin-bottom: 30px;
+            font-size: 18px;
+        }
+
+        .options-container {
+            display: flex;
+            justify-content: space-between; /* Add space between buttons */
+        }
+
+        .login-btn,
+        .signup-btn {
+            background-color: #2980b9; /* Blue button color */
+            color: #ffffff; /* White button text color */
+            padding: 15px 30px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            transition: background-color 0.3s ease-in-out; /* Smooth transition on hover */
+        }
+
+        .signup-btn {
+            margin-left: 20px; /* Increased margin to create more space */
+        }
+
+        .login-btn:hover,
+        .signup-btn:hover {
+            background-color: #1a5276; /* Darker blue on hover */
+        }
+    </style>
+</head>
+<body>
+    <div class="welcome-container">
+        <h2>Welcome!</h2>
+        <p></p>
+        <form method="post">
+            {% csrf_token %}
+            <div class="options-container">
+                <button type="submit" name="option" value="login" class="login-btn">LOG IN</button>
+                <button type="submit" name="option" value="signup" class="signup-btn">SIGN UP</button>
+            </div>
+        </form>
+    </div>
+</body>
+</html>
+
+
+
+
+
